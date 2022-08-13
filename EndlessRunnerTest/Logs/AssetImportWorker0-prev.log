@@ -1,0 +1,643 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.7f1 (24e8595d6d43) revision 2418777'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'ru' Physical Memory: 4087 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.7f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/ykpon/Desktop/Unity/Endless-runner-Test/EndlessRunnerTest
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+55005
+Successfully changed project path to: C:/Users/ykpon/Desktop/Unity/Endless-runner-Test/EndlessRunnerTest
+C:/Users/ykpon/Desktop/Unity/Endless-runner-Test/EndlessRunnerTest
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 129.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.7f1 (24e8595d6d43)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/ykpon/Desktop/Unity/Endless-runner-Test/EndlessRunnerTest/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTS 450 (ID=0x1245)
+    Vendor:   NVIDIA
+    VRAM:     979 MB
+    Driver:   23.21.13.8813
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56128
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.034554 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 174.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.679 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1680ms)
+		BeginReloadAssembly (172ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (1210ms)
+			LoadAssemblies (170ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (298ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (739ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (144ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (175ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (275ms)
+				ProcessInitializeOnLoadMethodAttributes (142ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.009342 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Endless-runner-Test\EndlessRunnerTest\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Endless-runner-Test\EndlessRunnerTest\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.10 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.071 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2073ms)
+		BeginReloadAssembly (360ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (146ms)
+		EndReloadAssembly (1466ms)
+			LoadAssemblies (192ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (530ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (90ms)
+			SetupLoadedEditorAssemblies (628ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (29ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (146ms)
+				ProcessInitializeOnLoadAttributes (387ms)
+				ProcessInitializeOnLoadMethodAttributes (52ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
+Refreshing native plugins compatible for Editor in 1.06 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3382 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (111.5 KB). Loaded Objects now: 3842.
+Memory consumption went from 117.5 MB to 117.4 MB.
+Total: 8.076600 ms (FindLiveObjects: 0.854300 ms CreateObjectMapping: 0.285300 ms MarkObjects: 6.745900 ms  DeleteObjects: 0.188400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2371.386849 seconds.
+  path: Assets/Scripts
+  artifactKey: Guid(11fb9caebbe74b349bc45cff2a3b9b5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts using Guid(11fb9caebbe74b349bc45cff2a3b9b5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '546b74bbaeba359fbb513a60e7e08683') in 0.025332 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.214949 seconds.
+  path: Assets/Prefabs
+  artifactKey: Guid(53e2345e2bdec4c4aad2a68ceff443ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(53e2345e2bdec4c4aad2a68ceff443ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28dc1f5f706c8be169af6952d5aa8c07') in 0.012227 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.015928 seconds.
+  path: Assets/Supercyan Character Pack Free Sample/Prefabs/Base
+  artifactKey: Guid(0ab18ef640fc1e14abd86fbd0d9eee67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Supercyan Character Pack Free Sample/Prefabs/Base using Guid(0ab18ef640fc1e14abd86fbd0d9eee67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '626fc3e6dd92ef80cf544501a7412835') in 0.016768 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.014328 seconds.
+  path: Assets/Supercyan Character Pack Free Sample/Prefabs/Simple Movement
+  artifactKey: Guid(a6b443b6b679b384a88c720a5f4fa1c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Supercyan Character Pack Free Sample/Prefabs/Simple Movement using Guid(a6b443b6b679b384a88c720a5f4fa1c0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1706a18f6cda004f7872ffbe2ba941c3') in 0.014880 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.678681 seconds.
+  path: Assets/Supercyan Character Pack Free Sample/Shaders/SupercyanShaderLighting.cginc
+  artifactKey: Guid(5d0112b3f28464343b1d63b5f923f528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Supercyan Character Pack Free Sample/Shaders/SupercyanShaderLighting.cginc using Guid(5d0112b3f28464343b1d63b5f923f528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b97bd2aa871af1f8e98b9139c0b2dd05') in 0.067403 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.521071 seconds.
+  path: Assets/Supercyan Character Pack Free Sample/Textures/free_male_1_body_diffuse.psd
+  artifactKey: Guid(66f042053f73a50488acb6b09c6afdd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Supercyan Character Pack Free Sample/Textures/free_male_1_body_diffuse.psd using Guid(66f042053f73a50488acb6b09c6afdd2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7503d421d8d84a658bd0b8e2fbc863b') in 0.118167 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Supercyan Character Pack Free Sample/Textures/free_male_1_head_diffuse.psd
+  artifactKey: Guid(e03c11e17f949074ea495c20697e773f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Supercyan Character Pack Free Sample/Textures/free_male_1_head_diffuse.psd using Guid(e03c11e17f949074ea495c20697e773f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bc3a1bd765cb6135eaafe79fabd38c9') in 0.038307 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.002320 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Materials/PandaMat.mat
+  artifactKey: Guid(c1ef7713ace2c6a4da847374d7c47a7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Materials/PandaMat.mat using Guid(c1ef7713ace2c6a4da847374d7c47a7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eed5c6962fbf4755b1fef74bcb858be2') in 0.523860 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.345001 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Demos/Pandazole Simple Game.fbx
+  artifactKey: Guid(d7eaca9659114a44d8367d36668c5616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Demos/Pandazole Simple Game.fbx using Guid(d7eaca9659114a44d8367d36668c5616) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '100bc788bcd1d6a0d2d8319750ff814e') in 0.865946 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Demos/SGP_Demo.fbx
+  artifactKey: Guid(2dc020296b8fe8b42a1b2788e9d395e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Demos/SGP_Demo.fbx using Guid(2dc020296b8fe8b42a1b2788e9d395e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e148b27cc4680b127b91dabd6d7ddd4c') in 1.395401 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.032226 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Arrow_01.prefab
+  artifactKey: Guid(8f7bce973172b894691d6bf53db9cdcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Arrow_01.prefab using Guid(8f7bce973172b894691d6bf53db9cdcc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3412de072f579d56a1b117457856e751') in 0.032085 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Env_Road_Straight_01.prefab
+  artifactKey: Guid(ec173c3a0dd044d49aa76756e6f62837) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Env_Road_Straight_01.prefab using Guid(ec173c3a0dd044d49aa76756e6f62837) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5e9a78c91f4e87cddfa7cf1114ec049') in 0.029452 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Env_Road_End_02.prefab
+  artifactKey: Guid(4f04aa6fd2801ac4b995145cee649fa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Env_Road_End_02.prefab using Guid(4f04aa6fd2801ac4b995145cee649fa1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1c4e600a952c00a51452f33c3d0e0f3') in 0.031380 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Env_Motel_01.prefab
+  artifactKey: Guid(deaa7bf5c66d02d4387274bea9212f79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Env_Motel_01.prefab using Guid(deaa7bf5c66d02d4387274bea9212f79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '418cb4bc31e7a9690ac924bef6ab0a17') in 0.030779 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Env_Road_Straight_02.prefab
+  artifactKey: Guid(838382e182c56094ebf55fa384b5f1b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Env_Road_Straight_02.prefab using Guid(838382e182c56094ebf55fa384b5f1b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2c3209542ddb788ec4d85d04ab7e6dd') in 0.034836 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Env_Road_Grass_01.prefab
+  artifactKey: Guid(623f6e318aac73947a34de78282715b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Env_Road_Grass_01.prefab using Guid(623f6e318aac73947a34de78282715b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f6bafeb2bdfcfb1336400c2b2b6553d') in 0.052762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Env_CommercialBuilding_01.prefab
+  artifactKey: Guid(36c588d4d2cea4543a8f06287520992c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Env_CommercialBuilding_01.prefab using Guid(36c588d4d2cea4543a8f06287520992c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af1a496afe5d1de88c9dc55cf407f4da') in 0.056563 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/BaseballBat_01.prefab
+  artifactKey: Guid(158ab0a391ada744fa4d573b410ead6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/BaseballBat_01.prefab using Guid(158ab0a391ada744fa4d573b410ead6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17efe318cdf9d3b52df1bd7fdba954eb') in 0.046742 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Bow_01.prefab
+  artifactKey: Guid(68137c2112088dd47ad3cb1b2ff2341e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Bow_01.prefab using Guid(68137c2112088dd47ad3cb1b2ff2341e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad7a5eea090f2262f033c5e67666798c') in 0.054360 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000107 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/CannedFood_01.prefab
+  artifactKey: Guid(6044f46bd69510d48a796d5fa03e10ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/CannedFood_01.prefab using Guid(6044f46bd69510d48a796d5fa03e10ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c9b3ab17778d6b63cfb8b12c47bf094') in 0.031324 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Axe_01.prefab
+  artifactKey: Guid(a028d11266903c34b845c1a69e33062d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Axe_01.prefab using Guid(a028d11266903c34b845c1a69e33062d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fb2317072b0729c3d4705f2bd87a4be') in 0.035816 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Env_ResidentBuilding_01.prefab
+  artifactKey: Guid(b6d2dcae7c7efd9459d35aefcaef9c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Env_ResidentBuilding_01.prefab using Guid(b6d2dcae7c7efd9459d35aefcaef9c80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00769c5c028f633f82a83d8865c20b46') in 0.032707 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.287797 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Food_Apple.prefab
+  artifactKey: Guid(e7a2a8a83b359a54f89e9c51b55f1d54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Food_Apple.prefab using Guid(e7a2a8a83b359a54f89e9c51b55f1d54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68bfcb201c1689726128a456c9b9e321') in 0.039502 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Food_Egg.prefab
+  artifactKey: Guid(fcc36f1d4ce74c7449a72822ff6449e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Food_Egg.prefab using Guid(fcc36f1d4ce74c7449a72822ff6449e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '828123a14a031c6168a7a343ec441b76') in 0.034897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Carpet_01.prefab
+  artifactKey: Guid(9e0ef940f3c18ec4fae5bcbadf9406cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Carpet_01.prefab using Guid(9e0ef940f3c18ec4fae5bcbadf9406cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bbf80896e97c7ee395596b158238f52f') in 0.038127 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Knife_01.prefab
+  artifactKey: Guid(695a4b22bfcfffa408b67d4e0a392673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Knife_01.prefab using Guid(695a4b22bfcfffa408b67d4e0a392673) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89b61ee6c04c7355083ddd6d16fd771d') in 0.031984 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Paint_01.prefab
+  artifactKey: Guid(46e341a6df12c6242944a0a205bd3842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Paint_01.prefab using Guid(46e341a6df12c6242944a0a205bd3842) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '254b455375033971c01519fa19f83cbe') in 0.032926 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_RoadCone_01.prefab
+  artifactKey: Guid(c24eb8b945e533543b57c77b18c13447) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_RoadCone_01.prefab using Guid(c24eb8b945e533543b57c77b18c13447) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd88fb30edfa2cf4557fddab42f30bf1b') in 0.038404 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/GasTank.prefab
+  artifactKey: Guid(113e7f395a0b80543aa41c82768507b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/GasTank.prefab using Guid(113e7f395a0b80543aa41c82768507b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2749d29319f59778f73c04afbe29cda') in 0.030741 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Food_Carrot.prefab
+  artifactKey: Guid(d56f8ac4fabf058479abd159340d1d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Food_Carrot.prefab using Guid(d56f8ac4fabf058479abd159340d1d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a3ea1a60b6314a86f0a6e7df22b8c7e') in 0.026846 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Intel_01.prefab
+  artifactKey: Guid(f7bfc3bf7195291478c8d3889852ebae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Intel_01.prefab using Guid(f7bfc3bf7195291478c8d3889852ebae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b3154c6a0c5764057d8e5bf771dfd5a') in 0.026720 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_ModernTV.prefab
+  artifactKey: Guid(e6ebbc43f51b43f4bb7907ee6939a686) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_ModernTV.prefab using Guid(e6ebbc43f51b43f4bb7907ee6939a686) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cc26633027b2483c5cf0e5f1a847ec8') in 0.042034 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_RoofVent_01.prefab
+  artifactKey: Guid(f74897866dd9f4f40a8665c68e2a5a30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_RoofVent_01.prefab using Guid(f74897866dd9f4f40a8665c68e2a5a30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dd2cab5d6e140ce5a72dcb7b420567f') in 0.032912 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/GroundBase_01.prefab
+  artifactKey: Guid(d209655c06f7fe040a0f4b8c5c946bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/GroundBase_01.prefab using Guid(d209655c06f7fe040a0f4b8c5c946bcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ed93d4f912bca663f06aa81cee00df2') in 0.031862 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Bush_01.prefab
+  artifactKey: Guid(cca12f5afb8ce8548ba635da63757947) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Bush_01.prefab using Guid(cca12f5afb8ce8548ba635da63757947) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19b7df876d246cd41773446b8b361d03') in 0.028690 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Book_01.prefab
+  artifactKey: Guid(2fac0727655d8f7418660fd17707e067) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Book_01.prefab using Guid(2fac0727655d8f7418660fd17707e067) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ec1c3bba159295ec190a81326e45355') in 0.035516 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_HomeLamp_01.prefab
+  artifactKey: Guid(54347665f552b5947b0c94d664faf2bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_HomeLamp_01.prefab using Guid(54347665f552b5947b0c94d664faf2bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3edf00eef01c82fcbfabf791ae36f560') in 0.028996 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/GlassBottle_01.prefab
+  artifactKey: Guid(36fee3af2a665864692eab932bef78d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/GlassBottle_01.prefab using Guid(36fee3af2a665864692eab932bef78d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e76a69fa3a617539d0fc5783f5afddd3') in 0.031416 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.490141 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_RoofWindow_01.prefab
+  artifactKey: Guid(24c9aaa998e38474aa4784114ae6dd23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_RoofWindow_01.prefab using Guid(24c9aaa998e38474aa4784114ae6dd23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55b309580e782b1b7617e8a50a54d994') in 0.042092 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_TrashCan_01.prefab
+  artifactKey: Guid(7d6fdeded9a93564485a33ca31e45583) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_TrashCan_01.prefab using Guid(7d6fdeded9a93564485a33ca31e45583) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae77e0987c75eba86915828b4ca9ef14') in 0.037233 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_StreetSign_TrafficSignals.prefab
+  artifactKey: Guid(8fe53d3db716d404f9334e341dffd96a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_StreetSign_TrafficSignals.prefab using Guid(8fe53d3db716d404f9334e341dffd96a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2be69f2b824af3bc09cf5c62201e58fa') in 0.038478 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Wall_01.prefab
+  artifactKey: Guid(f97bb3d4d89648c44ae86b5c684bc069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Wall_01.prefab using Guid(f97bb3d4d89648c44ae86b5c684bc069) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e1cbc4150bd830f8d3b6702944ee3bb') in 0.037621 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Sofa_01.prefab
+  artifactKey: Guid(96b7ca556ce445e47830fa1101bcdd33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Sofa_01.prefab using Guid(96b7ca556ce445e47830fa1101bcdd33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e341c217468b3def74d34bc6205a060b') in 0.031647 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_TrashBag_01.prefab
+  artifactKey: Guid(f763a8746b477b941bf6e84aea6e3864) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_TrashBag_01.prefab using Guid(f763a8746b477b941bf6e84aea6e3864) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cacb779c80d52cfe8cb9eeca97b376d') in 0.027754 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_WallShelf_01.prefab
+  artifactKey: Guid(3861c043afe2be543bbce74bc8f6db93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_WallShelf_01.prefab using Guid(3861c043afe2be543bbce74bc8f6db93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0f1b586004b5a051a4c374c2997ca2c') in 0.027915 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Table_01.001.prefab
+  artifactKey: Guid(d0170e45993037d4090f306552db19de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Table_01.001.prefab using Guid(d0170e45993037d4090f306552db19de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f075152492139c4338ee6de9f83ab6d4') in 0.033470 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/PryBar.prefab
+  artifactKey: Guid(d39e5bdf17ed0c94388607833a4c866c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/PryBar.prefab using Guid(d39e5bdf17ed0c94388607833a4c866c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aefb1acdafb043c5ebc6c9cfab5d7f5a') in 0.026883 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_StreetSign_Speed_30.prefab
+  artifactKey: Guid(47a2a9e39cc65834cb17ef7155da1e52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_StreetSign_Speed_30.prefab using Guid(47a2a9e39cc65834cb17ef7155da1e52) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6f283c6c6af06dd8b38dda5827ed42cb') in 0.045146 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_WallShelf_02.prefab
+  artifactKey: Guid(42107521ef2a7044d82e542572b54888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_WallShelf_02.prefab using Guid(42107521ef2a7044d82e542572b54888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac450a0857078ba6bb323258442752b9') in 0.030909 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Tree_04.prefab
+  artifactKey: Guid(c79d4784e3704994c9e584801bed4dd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Tree_04.prefab using Guid(c79d4784e3704994c9e584801bed4dd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f19b3e5fff4379728a00484aa93e2c4e') in 0.033143 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Table_01.prefab
+  artifactKey: Guid(cffef0e54887ac8448c9f65303733eb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_Table_01.prefab using Guid(cffef0e54887ac8448c9f65303733eb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '520f7878ef06a4c791434d914a9092c8') in 0.033314 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_TV_Table.prefab
+  artifactKey: Guid(7e399f3872d332b4faec96793c759cc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/Prop_TV_Table.prefab using Guid(7e399f3872d332b4faec96793c759cc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '717bd010eda1e250ed969ed17833bc06') in 0.029708 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.628914 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/SodaCan.prefab
+  artifactKey: Guid(54bf41ce18711524195534092b648214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/SodaCan.prefab using Guid(54bf41ce18711524195534092b648214) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17e9e59d6619e27ffe4e6aa21d126ae5') in 0.044381 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/WallCShape_01.prefab
+  artifactKey: Guid(2a9f5bd9a13cac44e840437c3cfaed45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/WallCShape_01.prefab using Guid(2a9f5bd9a13cac44e840437c3cfaed45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4397d573f8c1957c1987d7e923d3caf') in 0.037465 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000086 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/WallCornor_01.prefab
+  artifactKey: Guid(67393d030ffe2ee48872d86123583466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Prefabs/WallCornor_01.prefab using Guid(67393d030ffe2ee48872d86123583466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1380c94eca81ffea5f7c631035f1983e') in 0.036495 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.919805 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Textures/PandaMat.png
+  artifactKey: Guid(9708c258323b0304e967c27a4d9352c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Textures/PandaMat.png using Guid(9708c258323b0304e967c27a4d9352c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2a20c2b055d1e4a2b5b0be69b19fa18') in 0.337718 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 478.976606 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Env_CommercialBuilding_01.fbx
+  artifactKey: Guid(b858118c219cf7f40bb10b5024b81cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Env_CommercialBuilding_01.fbx using Guid(b858118c219cf7f40bb10b5024b81cfd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68d7ca19e3c768654378e980f1690d3e') in 0.036853 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Env_ResidentBuilding_01.fbx
+  artifactKey: Guid(d7ff47761c5cb9d4280359c0d7a91741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Env_ResidentBuilding_01.fbx using Guid(d7ff47761c5cb9d4280359c0d7a91741) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '969f75c80a3c12509c140d1a978ec33e') in 0.048763 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Food_Carrot.fbx
+  artifactKey: Guid(6dea3d3b9d248004eb3ac30481e05bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Food_Carrot.fbx using Guid(6dea3d3b9d248004eb3ac30481e05bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b2121160ef814643d1ca2739e8645f2') in 0.041662 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Env_Road_Straight_02.fbx
+  artifactKey: Guid(10d25393721ede84facb77671a13a7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Env_Road_Straight_02.fbx using Guid(10d25393721ede84facb77671a13a7a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac3fe30900dbfddbe70ce543017f54fe') in 0.045561 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/GasTank.fbx
+  artifactKey: Guid(f97a870e164214142a3dbf1f6583a510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/GasTank.fbx using Guid(f97a870e164214142a3dbf1f6583a510) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25664da900f561251d48f9a1da9a6ba0') in 0.041688 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Env_Road_End_02.fbx
+  artifactKey: Guid(e80e03bff3411b5488f8a70ca0556eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Env_Road_End_02.fbx using Guid(e80e03bff3411b5488f8a70ca0556eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be0b7de067c3d6410b9cf8f98be88253') in 0.044976 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/GlassBottle_01.fbx
+  artifactKey: Guid(a9ef07fdc9b4067499cb418e3125f4ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/GlassBottle_01.fbx using Guid(a9ef07fdc9b4067499cb418e3125f4ac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbc4fa015f6dfe152e25b226d087673c') in 0.045645 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Food_Apple.fbx
+  artifactKey: Guid(9c1d619f8953c1a4291f2fef4d07b8c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Food_Apple.fbx using Guid(9c1d619f8953c1a4291f2fef4d07b8c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '747298646d8703cbdf98b9c3289d0856') in 0.046604 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/GroundBase_01.fbx
+  artifactKey: Guid(cdca5cb319d0e0140b287caa07d1aeb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/GroundBase_01.fbx using Guid(cdca5cb319d0e0140b287caa07d1aeb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4279f6df50a7147799d294bfab6fbf09') in 0.062721 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Env_Road_Grass_01.fbx
+  artifactKey: Guid(d61f092b463efe145b8ac91534fc1365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Env_Road_Grass_01.fbx using Guid(d61f092b463efe145b8ac91534fc1365) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3986ea7dfaaecd1ea532575383bfa8b4') in 0.036677 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Env_Motel_01.fbx
+  artifactKey: Guid(2c46d4de4e95db541917edeeeba6539e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Env_Motel_01.fbx using Guid(2c46d4de4e95db541917edeeeba6539e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdbea02dfc6f40fb6b1464842006dd06') in 0.058522 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Food_Egg.fbx
+  artifactKey: Guid(476e61f1cf4c0b14ebc1c1d1e47cfdf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Food_Egg.fbx using Guid(476e61f1cf4c0b14ebc1c1d1e47cfdf9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71063071da5a20050a0d52fc6423b333') in 0.038021 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Env_Road_Straight_01.fbx
+  artifactKey: Guid(826bcfeb16d117f4f825964ba4710656) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Pandazole_Ultimate_Pack/Pandazole Simple Game Pack/Models/Env_Road_Straight_01.fbx using Guid(826bcfeb16d117f4f825964ba4710656) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2278d267e48296c22e655e7544c586a') in 0.034908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 22.915897 seconds.
+  path: Assets/Prefabs/SpawnManager.cs
+  artifactKey: Guid(bf7fbf42db79ceb419299471042d8dd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/SpawnManager.cs using Guid(bf7fbf42db79ceb419299471042d8dd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e7fcf82ff6a96281609c3b8eab48ad1') in 0.608851 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008593 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Endless-runner-Test\EndlessRunnerTest\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\ykpon\Desktop\Unity\Endless-runner-Test\EndlessRunnerTest\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.19 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.756 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1757ms)
+		BeginReloadAssembly (258ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (67ms)
+		EndReloadAssembly (1304ms)
+			LoadAssemblies (172ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (439ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (71ms)
+			SetupLoadedEditorAssemblies (577ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (37ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (116ms)
+				ProcessInitializeOnLoadAttributes (360ms)
+				ProcessInitializeOnLoadMethodAttributes (49ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.13 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3376 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (78.9 KB). Loaded Objects now: 3889.
+Memory consumption went from 122.5 MB to 122.4 MB.
+Total: 5.741100 ms (FindLiveObjects: 0.647200 ms CreateObjectMapping: 0.172600 ms MarkObjects: 4.751200 ms  DeleteObjects: 0.167000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
