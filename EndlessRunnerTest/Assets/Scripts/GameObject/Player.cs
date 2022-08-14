@@ -47,14 +47,14 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag == "Coin")
         {
             _scoreManager.PickUpCoin();
-            _animationManager.CreateFirePickUpCoin(other.transform.position);
+            _animationManager.PickUpCoin(other.transform.position);
         }
         else if (other.gameObject.tag == "Obstacle")
         {
             Destroy(gameObject);
             _UIManager.OnTableGameOver();
             _difficultyManager.GameOver();
-            _animationManager.CreateFireCrashObstacle(other.transform.position);
+            _animationManager.CrashObstacle(other.transform.position);
         }
     }
 }
