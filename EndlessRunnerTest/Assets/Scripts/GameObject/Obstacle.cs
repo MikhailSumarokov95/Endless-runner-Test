@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Obstacle : EnvironmentManager
+public class Obstacle : ObjectSceneMoving
 {
     private void OnTriggerStay (Collider other)
     {

@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnvironmentManager : MonoBehaviour
+public abstract class ObjectSceneMoving: MonoBehaviour
 {
     private DifficultyManager _difficultyManager;
-    private int _difficulty;
+    private float _difficulty;
     private float _speed = - 10;
 
     private void Start()

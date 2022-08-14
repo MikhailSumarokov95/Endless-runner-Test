@@ -13,7 +13,7 @@ public class InputControler : MonoBehaviour
     private void Update()
     {
         Move();
-        //Jump();
+        Jump();
     }
 
     private void Move()
@@ -22,8 +22,8 @@ public class InputControler : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.RightArrow)) _player.MoveRight();
     }
 
-    //private void Jump()
-    //{
-    //    if (Input.GetKeyDown(KeyCode.Space)) _player.Jump();
-    //}
+    private void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)) _player.Jump();
+    }
 }

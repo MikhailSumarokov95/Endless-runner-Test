@@ -11,18 +11,24 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject _tableGameOver;
     [SerializeField] Button _restartButton;
     [SerializeField] TextMeshProUGUI _textTopCoinsScore;
+    [SerializeField] private GameObject _coin;
+
+    private void Update()
+    {
+        CoinRotate();
+    }
 
     public void SetTextCoins(int coins)
     {
-        _textCoins.text = "Coins: " + coins;
+        _textCoins.text = coins.ToString();
     }
 
     public void SetTopCoinsScore(int topCoins)
     {
-        _textTopCoinsScore.text = "TopCoins " + topCoins;
+        _textTopCoinsScore.text = "Record: " + topCoins;
     }
 
-    public void OnTableGameOver()
+    public void GameOver()
     {
         _tableGameOver.SetActive(true);
         _restartButton.onClick.AddListener(ReloadScene);
@@ -32,5 +38,10 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
+    }
+
+    private void CoinRotate()
+    {
+        _coin.transform.Rotate(new Vector3(0, 100f * Time.deltaTime, 0));
     }
 }

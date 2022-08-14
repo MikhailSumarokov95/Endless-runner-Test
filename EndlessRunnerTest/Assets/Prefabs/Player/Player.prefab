@@ -263,8 +263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d730b3b89dc4b624fb832be7e0cddf15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _firePickUpCoin: {fileID: 3270254085333126979, guid: e362896a9a66b9c4b87ec994aaee56dc, type: 3}
-  _fireCrashObstacle: {fileID: 3729567203740576960, guid: 4cf64cd6e12bc014989c50d8b54d9df6, type: 3}
+  _powerJump: 5
 --- !u!54 &2774829398224971194
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin : EnvironmentManager
+public class Coin : ObjectSceneMoving
 {
     [SerializeField] private GameObject _coin;
 
