@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour
     [SerializeField] AudioSource _moveAudio;
     [SerializeField] AudioSource _crashAudio;
     [SerializeField] AudioSource _PickUpAudio;
+    [SerializeField] AudioSource _PickUpBoostAudio;
 
     public void Move()
     {
@@ -21,5 +22,10 @@ public class SoundManager : MonoBehaviour
     public void PickUpCoin()
     {
         _PickUpAudio.Play();
+    }  
+    
+    public void PickUpCoinBoost()
+    {
+        _PickUpBoostAudio.Play();
     }
 }

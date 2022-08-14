@@ -5,23 +5,19 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     private Vector3 _translateRange = new Vector3(1.6f, 0, 0);
-    [SerializeField] private float _powerJump = 5f;
+    private float _powerJump = 5f;
     private Rigidbody _playerRigidbody;
-    private ScoreManager _scoreManager;
-    private UIManager _UIManager;
-    private DifficultyManager _difficultyManager;
     private AnimationManager _animationManager;
     private SoundManager _soundManager;
+    private EventManager _eventManager;
     private bool _stayOnGround;
 
     private void Start()
     {
         _playerRigidbody = GetComponent<Rigidbody>();
-        _scoreManager = GameObject.FindGameObjectWithTag("ScoreManager").GetComponent<ScoreManager>();
-        _UIManager = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UIManager>();
-        _difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
         _animationManager = GameObject.FindGameObjectWithTag("AnimationManager").GetComponent<AnimationManager>();
         _soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
+        _eventManager = GameObject.FindGameObjectWithTag("EventManager").GetComponent<EventManager>();
     }
 
     public void MoveLeft()
@@ -46,8 +42,8 @@ public class Player : MonoBehaviour
     {
         if (_stayOnGround)
         {
-            Debug.Log("Jump");
             _playerRigidbody.AddForce(Vector3.up * _powerJump, ForceMode.Impulse);
+            _animationManager.Jump();
         }
     }
 
@@ -56,18 +52,17 @@ public class Player : MonoBehaviour
 
         if (other.gameObject.tag == "Coin")
         {
-            _scoreManager.PickUpCoin();
-            _animationManager.PickUpCoin(other.transform.position);
-            _soundManager.PickUpCoin();
-
+            _eventManager.PickUpCoin(other.transform.position);
         }
         else if (other.gameObject.tag == "Obstacle")
         {
             Destroy(gameObject);
-            _UIManager.GameOver();
-            _difficultyManager.GameOver();
-            _animationManager.CrashObstacle(other.transform.position);
-            _soundManager.CrashObstacle();
+            _eventManager.CrushObstacle(other.transform.position);
+        }
+
+        else if (other.gameObject.tag == "CoinBoost")
+        {
+            _eventManager.PickUpCoinBoost(other.transform.position);
         }
     }
 

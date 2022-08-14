@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] private int _coinsScore;
+    private int _coinsScore;
     private UIManager _UIManager;
     private StorageDataGame _storageDataGame;
     private int _topCoinsScore;
+    private int boost = 1;
 
     private void Start()
     {
@@ -19,12 +20,22 @@ public class ScoreManager : MonoBehaviour
         
     public void PickUpCoin()
     {
-        _coinsScore++;
+        _coinsScore += boost;
         _UIManager.SetTextCoins(_coinsScore);
         if (_coinsScore > _topCoinsScore)
         {
             _storageDataGame.SetTopCoinsScore(_coinsScore);
             _UIManager.SetTopCoinsScore(_coinsScore);
         }
+    }
+
+    public void SetBoost()
+    {
+        boost = 2;
+    }
+
+    public void ResetBoost()
+    {
+        boost = 1;
     }
 }

@@ -7,6 +7,7 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private GameObject _roadPrefab;
     [SerializeField] private GameObject _road;
     [SerializeField] private GameObject _coin;
+    [SerializeField] private GameObject _coinBoost;
     [SerializeField] private GameObject[] _environment;
     [SerializeField] private GameObject[] _obstacls;
     private DifficultyManager _difficultyManager;
@@ -24,6 +25,7 @@ public class SpawnManager : MonoBehaviour
         StartCoroutine(SpawnEnvironmentObject());
         StartCoroutine(SpawnCoins());
         StartCoroutine(SpawnObstacle());
+        StartCoroutine(SpawnBonus());
     }
 
     private void Update()
@@ -67,6 +69,16 @@ public class SpawnManager : MonoBehaviour
             _spawnPointObstacle.z = _spawnPointZCoinAndObtacle[Random.Range(0, 3)];
             int numberObstacle = Random.Range(0, _obstacls.Length);
             Instantiate(_obstacls[numberObstacle], _spawnPointObstacle, _obstacls[numberObstacle].transform.rotation);
+        }
+    }
+
+    IEnumerator SpawnBonus()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(20 / _difficultyManager.SpeedGame);
+            _spawnPointCoin.z = _spawnPointZCoinAndObtacle[Random.Range(0, 3)];
+            Instantiate(_coinBoost, _spawnPointCoin, _coinBoost.transform.rotation);
         }
     }
 }
