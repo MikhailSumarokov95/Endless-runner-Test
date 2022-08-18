@@ -11,12 +11,6 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject _tableGameOver;
     [SerializeField] Button _restartButton;
     [SerializeField] TextMeshProUGUI _textTopCoinsScore;
-    [SerializeField] private GameObject _coin;
-
-    private void Update()
-    {
-        CoinRotate();
-    }
 
     public void SetTextCoins(int coins)
     {
@@ -38,10 +32,5 @@ public class UIManager : MonoBehaviour
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
-    }
-
-    private void CoinRotate()
-    {
-        _coin.transform.Rotate(new Vector3(0, 100f * Time.deltaTime, 0));
     }
 }
