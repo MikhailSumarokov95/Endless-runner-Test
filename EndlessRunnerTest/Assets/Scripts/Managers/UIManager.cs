@@ -7,10 +7,9 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI _textCoins;
+    [SerializeField] TMP_Text _textCoins;
     [SerializeField] GameObject _tableGameOver;
-    [SerializeField] Button _restartButton;
-    [SerializeField] TextMeshProUGUI _textTopCoinsScore;
+    [SerializeField] TMP_Text _textTopCoinsScore;
 
     public void SetTextCoins(int coins)
     {
@@ -25,10 +24,9 @@ public class UIManager : MonoBehaviour
     public void GameOver()
     {
         _tableGameOver.SetActive(true);
-        _restartButton.onClick.AddListener(ReloadScene);
     }
 
-    private void ReloadScene()
+    public void ReloadScene()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene(0);
