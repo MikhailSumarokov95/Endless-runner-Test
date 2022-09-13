@@ -46,7 +46,7 @@ public class SpawnManager : MonoBehaviour
         {
             yield return new WaitForSeconds(1 / _difficultyManager.SpeedGame);
             int numberEnvironment = Random.Range(0, _environment.Length);
-            Instantiate(_environment[numberEnvironment], _spawnPointEnvironmentLeft, _environment[numberEnvironment].transform.rotation);
+            Instantiate(_environment[numberEnvironment], _spawnPointEnvironmentLeft, Quaternion.Euler(0, 180, 0));
             Instantiate(_environment[numberEnvironment], _spawnPointEnvironmentRight, _environment[numberEnvironment].transform.rotation);
         }
     }

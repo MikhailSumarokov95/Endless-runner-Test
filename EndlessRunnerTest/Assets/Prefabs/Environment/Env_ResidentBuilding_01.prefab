@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2318154071143762355}
   - component: {fileID: 2722006623384349309}
   - component: {fileID: 6495632378248412701}
-  - component: {fileID: 55781476335761618}
   - component: {fileID: 8657082244997684768}
   m_Layer: 0
   m_Name: Env_ResidentBuilding_01
@@ -85,20 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &55781476335761618
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2467920325606436258}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6040685055165959431, guid: d7ff47761c5cb9d4280359c0d7a91741, type: 3}
 --- !u!114 &8657082244997684768
 MonoBehaviour:
   m_ObjectHideFlags: 0

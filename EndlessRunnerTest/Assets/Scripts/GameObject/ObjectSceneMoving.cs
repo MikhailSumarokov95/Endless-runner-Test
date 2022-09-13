@@ -7,11 +7,14 @@ public abstract class ObjectSceneMoving: MonoBehaviour
     private DifficultyManager _difficultyManager;
     private float _difficulty;
     private float _speed = - 10;
+    private float _coefficient—orrectiveDirection;
 
-    private void Start()
+    private void OnEnable()
     {
         _difficultyManager = GameObject.FindGameObjectWithTag("DifficultyManager").GetComponent<DifficultyManager>();
-        _difficulty = _difficultyManager.SpeedGame;        
+        _difficulty = _difficultyManager.SpeedGame;
+        if (transform.eulerAngles.y > 179) _coefficient—orrectiveDirection = -1;
+        else _coefficient—orrectiveDirection = 1;
     }
 
     public virtual void Update()
@@ -23,6 +26,6 @@ public abstract class ObjectSceneMoving: MonoBehaviour
 
     private void Move()
     {
-        transform.Translate(_speed * _difficulty * Time.deltaTime, 0, 0);
+        transform.Translate(Vector3.right * _coefficient—orrectiveDirection * _speed * _difficulty * Time.deltaTime);
     }
 }

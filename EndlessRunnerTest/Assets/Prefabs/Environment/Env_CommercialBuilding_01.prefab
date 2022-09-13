@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6420934885875765027}
   - component: {fileID: 4404731723088434295}
   - component: {fileID: 3601143751966319842}
-  - component: {fileID: 1300203810218396000}
   - component: {fileID: 8971879236219586855}
   m_Layer: 0
   m_Name: Env_CommercialBuilding_01
@@ -85,20 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1300203810218396000
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4195735405934698262}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 3485248124086803785, guid: b858118c219cf7f40bb10b5024b81cfd, type: 3}
 --- !u!114 &8971879236219586855
 MonoBehaviour:
   m_ObjectHideFlags: 0
