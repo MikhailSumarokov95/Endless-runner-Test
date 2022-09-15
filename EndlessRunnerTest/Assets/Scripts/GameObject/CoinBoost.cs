@@ -5,6 +5,8 @@ using UnityEngine;
 public class CoinBoost : ObjectSceneMoving
 {
     [SerializeField] private GameObject _coin;
+    [SerializeField] private GameObject _soundPickUpCoinBoost;
+    [SerializeField] private GameObject _firePickUpCoinBoost;
 
     public override void Update()
     {
@@ -19,6 +21,13 @@ public class CoinBoost : ObjectSceneMoving
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player") Destroy(gameObject);
+        if (other.gameObject.tag == "Player")
+        {
+            var soundpickUpCoinBoost = Instantiate(_soundPickUpCoinBoost);
+            Destroy(soundpickUpCoinBoost, soundpickUpCoinBoost.GetComponent<AudioSource>().clip.length);
+            var firePickUpCoinBoost = Instantiate(_firePickUpCoinBoost, transform.position, Quaternion.identity);
+            Destroy(firePickUpCoinBoost, 0.3f);
+            Destroy(gameObject);
+        }
     }
 }

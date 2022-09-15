@@ -218,7 +218,7 @@ namespace ToxicFamilyGames.MenuEditor
 
         private void Awake()
         {
-            if (instance != null)
+            if (instance == null)
             {
                 instance = this;
             } 

@@ -1,41 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
+    [SerializeField] private TMP_Text _textCoins;
     private int _coinsScore;
-    private UIManager _UIManager;
-    private StorageDataGame _storageDataGame;
-    private int _topCoinsScore;
-    private int boost = 1;
-
+    private int _boost = 1;
+   
     private void Start()
     {
-        _UIManager = GameObject.FindGameObjectWithTag("Canvas").GetComponent<UIManager>();
-        _storageDataGame = new StorageDataGame();
-        _topCoinsScore = _storageDataGame.GetTopCoinsScore();
-        _UIManager.SetTopCoinsScore(_topCoinsScore);
+        _coinsScore = PlayerPrefs.GetInt("money", 0);
+        SetCoinsText(_coinsScore);
     }
         
     public void PickUpCoin()
     {
-        _coinsScore += boost;
-        _UIManager.SetTextCoins(_coinsScore);
-        if (_coinsScore > _topCoinsScore)
-        {
-            _storageDataGame.SetTopCoinsScore(_coinsScore);
-            _UIManager.SetTopCoinsScore(_coinsScore);
-        }
+        _coinsScore += _boost;
+        PlayerPrefs.SetInt("money", _coinsScore);
+        SetCoinsText(_coinsScore);
     }
 
-    public void SetBoost()
+    public void SpentCoinInShop(int amountSpentCoins) => _coinsScore -= amountSpentCoins; 
+
+    public void SetBoost(bool status)
     {
-        boost = 2;
+        if (status) _boost = 2;
+        else _boost = 1;
     }
 
-    public void ResetBoost()
-    {
-        boost = 1;
-    }
+    private void SetCoinsText(int coinsScore) => _textCoins.text = "Coins: " + coinsScore.ToString();
 }

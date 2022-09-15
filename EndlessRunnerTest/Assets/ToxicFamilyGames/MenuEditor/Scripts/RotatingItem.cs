@@ -11,7 +11,7 @@ namespace ToxicFamilyGames
             // Update is called once per frame
             void Update()
             {
-                transform.localRotation *= Quaternion.Euler(0, 3, 0);
+                transform.localRotation *= Quaternion.Euler(0, 1, 0);
             }
         }
     }

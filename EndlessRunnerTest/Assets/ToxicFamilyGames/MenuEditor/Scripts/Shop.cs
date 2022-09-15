@@ -16,7 +16,7 @@ namespace ToxicFamilyGames
             private bool isActive;
 
             [SerializeField]
-            private Shoper shoper;
+            private SpawnManager shoper;
 
             [SerializeField]
             private GameObject[] items;
@@ -27,14 +27,17 @@ namespace ToxicFamilyGames
             [SerializeField]
             private float[] itemsScaleRatio;
 
+            [SerializeField]
+            private Transform PointShowItem;
+
             [Header("Кнопки")]
             [SerializeField]
             private GameObject buyButton;
             [SerializeField]
             private GameObject selectButton;
 
-            private int selectedItem = 0;
-            private Transform itemTransform;
+            private int indexShowingItem = 0;
+
             public static int Money
             {
                 get { return PlayerPrefs.GetInt("money", 0); }
@@ -43,38 +46,46 @@ namespace ToxicFamilyGames
 
             public bool IsBuySelectedItem
             {
-                get { return PlayerPrefs.GetInt(items[selectedItem].name, 0) == 1; }
+                get { return PlayerPrefs.GetInt(items[indexShowingItem].name, 0) == 1; }
+            }
+
+            private void Awake()
+            {
+                shoper.OnSelectCharacter(items[PlayerPrefs.GetInt("selectedItemIndex", 0)]);
             }
 
             private void Start()
             {
-                itemTransform = transform.GetChild(0);
                 InitItem();
                 InitButtons();
-                if (shoper != null)
-                    shoper.OnInit(items);
                 gameObject.SetActive(isActive);
             }
 
             [ContextMenu("NextItem")]
             public void GoNextItem()
             {
-                selectedItem = (selectedItem + 1) % items.Length;
+                indexShowingItem = (indexShowingItem + 1) % items.Length;
                 InitItem();
             }
 
             [ContextMenu("PreviousItem")]
             public void GoPreviousItem()
             {
-                selectedItem = (selectedItem - 1 + items.Length) % items.Length;
+                indexShowingItem = (indexShowingItem - 1 + items.Length) % items.Length;
                 InitItem();
             }
 
             private void InitItem()
             {
                 DestroyItem();
-                GameObject item = Instantiate(items[selectedItem], itemTransform);
-                item.transform.localScale *= itemsScaleRatio[selectedItem];
+                GameObject item = Instantiate(items[indexShowingItem], PointShowItem);
+                MonoBehaviour[] components = item.GetComponents<MonoBehaviour>();
+                for (int i = 0; i < components.Length; i++)
+                {
+                    components[i].enabled = false;
+                    components[i].GetComponent<Rigidbody>().useGravity = false;
+                }
+                item.transform.localScale *= itemsScaleRatio[indexShowingItem];
                 item.AddComponent<RotatingItem>();
                 InitButtons();
             }
@@ -84,22 +95,22 @@ namespace ToxicFamilyGames
                 bool isBuy = IsBuySelectedItem;
                 selectButton.SetActive(isBuy);
                 buyButton.SetActive(!isBuy);
-                (buyButton.transform.GetChild(0).GetComponent<TMP_Text>()).text = itemsPrice[selectedItem] + "";
+                (buyButton.transform.GetChild(0).GetComponent<TMP_Text>()).text = itemsPrice[indexShowingItem] + "";
             }
 
             [ContextMenu("DestroyItem")]
             private void DestroyItem()
             {
-                if (itemTransform.childCount != 0) Destroy(itemTransform.GetChild(0).gameObject);
+                if (PointShowItem.childCount != 0) Destroy(PointShowItem.GetChild(0).gameObject);
             }
 
             [ContextMenu("BuyItem")]
             public void BuyItem()
             {
-                if (Money - itemsPrice[selectedItem] >= 0)
+                if (Money - itemsPrice[indexShowingItem] >= 0)
                 {
-                    Money -= itemsPrice[selectedItem];
-                    PlayerPrefs.SetInt(items[selectedItem].name, 1);
+                    Money -= itemsPrice[indexShowingItem];
+                    PlayerPrefs.SetInt(items[indexShowingItem].name, 1);
                     InitButtons();
                     SelectItem();
                 }
@@ -108,8 +119,9 @@ namespace ToxicFamilyGames
             [ContextMenu("SelectItem")]
             public void SelectItem()
             {
+                PlayerPrefs.SetInt("selectedItemIndex", indexShowingItem);
                 if (shoper != null)
-                    shoper.OnSelect(selectedItem);
+                    shoper.OnSelectCharacter(items[indexShowingItem]);
             }
         }
     }

@@ -152,6 +152,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _coin: {fileID: 1023096084828619312}
+  _soundPickUpCoinBoost: {fileID: 2420547367736592069, guid: 5e2c2615f70dd1548bbf710f041b8e89, type: 3}
+  _firePickUpCoinBoost: {fileID: 2334439849365760311, guid: 445f849707dbea64d8f803d1ba842651, type: 3}
 --- !u!54 &496142350
 Rigidbody:
   m_ObjectHideFlags: 0

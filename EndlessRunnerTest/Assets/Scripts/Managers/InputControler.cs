@@ -5,9 +5,12 @@ using UnityEngine;
 public class InputControler : MonoBehaviour
 { 
     private Player _player;
+    private SpawnManager _spawnManager;
+
     private void Start()
     {
-        _player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        _spawnManager = FindObjectOfType<SpawnManager>();
+        _spawnManager.onCreateCharacter += InitializedCharacter;
     }
 
     private void Update()
@@ -25,5 +28,10 @@ public class InputControler : MonoBehaviour
     private void Jump()
     {
         if (Input.GetKeyDown(KeyCode.Space)) _player.Jump();
+    }
+
+    private void InitializedCharacter(GameObject character)
+    {
+        _player = character.GetComponent<Player>();
     }
 }

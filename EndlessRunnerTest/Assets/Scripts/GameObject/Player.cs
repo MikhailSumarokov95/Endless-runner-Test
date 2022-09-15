@@ -4,75 +4,99 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    private Vector3 _translateRange = new Vector3(1.6f, 0, 0);
-    private float _powerJump = 5f;
-    private Rigidbody _playerRigidbody;
-    private AnimationManager _animationManager;
-    private SoundManager _soundManager;
-    private EventManager _eventManager;
-    private bool _stayOnGround;
+    [SerializeField] private GameObject _jumpAudio;
+    [SerializeField] private GameObject _moveAudio;
+    [SerializeField] private float _smoothMove = 3.5f;
+    [SerializeField] private AnimationCurve _yPosition;
+    [SerializeField] private bool _isJump;
+    [SerializeField] private float _heightJump = 2f;
+    [SerializeField] private float _timeJump = 1f;
+    private float _jumpTime = 0;
+    private Transform _target;
+    private Vector3 _translateRange = new Vector3(0, 0, -1.6f);
+    private Animator _playerAnimator;
+    private ScoreManager _scoreManager;
+    private DifficultyManager _difficultyManager;
+    private StatusGameManager _statusGameManager;
 
     private void Start()
     {
-        _playerRigidbody = GetComponent<Rigidbody>();
-        _animationManager = GameObject.FindGameObjectWithTag("AnimationManager").GetComponent<AnimationManager>();
-        _soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
-        _eventManager = GameObject.FindGameObjectWithTag("EventManager").GetComponent<EventManager>();
+        _playerAnimator = GetComponent<Animator>();
+        _target = GameObject.FindGameObjectWithTag("TargetMovePlayer").transform;
+        _scoreManager = FindObjectOfType<ScoreManager>();
+        _difficultyManager = FindObjectOfType<DifficultyManager>();
+        _statusGameManager = FindObjectOfType<StatusGameManager>();
+    }
+
+    private void Update()
+    {
+        _target.position = new Vector3(_target.position.x, transform.position.y, _target.position.z);
+        transform.position = Vector3.Lerp(transform.position, _target.position, Time.deltaTime * _smoothMove);
+        if (_isJump) Jumping();
     }
 
     public void MoveLeft()
     {
-        if (!(transform.position.z > 0.1f))
+        if (!(_target.transform.position.z > 0.1f))
         {
-            transform.Translate(-_translateRange);
-            _soundManager.Move();
+            _target.transform.Translate(-_translateRange);
+            PlayerSound(_moveAudio);
         }
     }  
 
     public void MoveRight()
     {
-        if (!(transform.position.z < -0.1f))
+        if (!(_target.transform.position.z < -0.1f))
         {
-            transform.Translate(_translateRange);
-            _soundManager.Move();
+            _target.transform.Translate(_translateRange);
+            PlayerSound(_moveAudio);
         }
     }
 
     public void Jump()
     {
-        if (_stayOnGround)
+        if (!_isJump)
         {
-            _playerRigidbody.AddForce(Vector3.up * _powerJump, ForceMode.Impulse);
-            _animationManager.Jump();
+            var jumpAudio = Instantiate(_jumpAudio);
+            Destroy(jumpAudio, jumpAudio.GetComponent<AudioSource>().clip.length);
+            _isJump = true;
+            _playerAnimator.SetTrigger("Jump");
         }
+    }
+
+    private void Jumping()
+    {
+        _jumpTime += Time.deltaTime / _timeJump;
+        transform.position = new Vector3(transform.position.x, _yPosition.Evaluate(_jumpTime) * 2 * _heightJump, transform.position.z);
+        if (_jumpTime >= 1)
+        {
+            _isJump = false;
+            _jumpTime = 0;
+        }
+    }
+
+    private void PlayerSound(GameObject sound)
+    {
+        var soundObj = Instantiate(sound);
+        Destroy(soundObj, soundObj.GetComponent<AudioSource>().clip.length);
     }
 
     private void OnTriggerEnter (Collider other)
     {
-
-        if (other.gameObject.tag == "Coin")
+        switch (other.gameObject.tag)
         {
-            _eventManager.PickUpCoin(other.transform.position);
-        }
-        else if (other.gameObject.tag == "Obstacle")
-        {
-            Destroy(gameObject);
-            _eventManager.CrushObstacle(other.transform.position);
-        }
+            case "Coin":
+                _scoreManager.PickUpCoin();
+                break;
 
-        else if (other.gameObject.tag == "CoinBoost")
-        {
-            _eventManager.PickUpCoinBoost(other.transform.position);
+            case "Obstacle":
+                Destroy(gameObject);
+                _statusGameManager.GameOver();
+                break;
+
+            case "CoinBoost":
+                _difficultyManager.SetBoost();
+                break;
         }
-    }
-
-    private void OnCollisionStay(Collision other)
-    {
-        if (other.gameObject.tag == "Road") _stayOnGround = true;
-    }
-
-    private void OnCollisionExit(Collision other)
-    {
-        if (other.gameObject.tag == "Road") _stayOnGround = false;
     }
 }

@@ -6,10 +6,9 @@ namespace ToxicFamilyGames
 {
     namespace MenuEditor
     {
-        public abstract class Shoper : MonoBehaviour
+        public interface IShoper
         {
-            public abstract void OnInit(GameObject[] items);
-            public abstract void OnSelect(int selectedItem);
+            public void OnSelectCharacter(GameObject charasterSkinSelectedIndex);
         }
     }
 }
