@@ -201,6 +201,7 @@ namespace ToxicFamilyGames.MenuEditor
             set
             {
                 PlayerPrefs.SetString("selectedLanguage", value);
+                InitTexts();
             }
         }
 
@@ -232,13 +233,14 @@ namespace ToxicFamilyGames.MenuEditor
         {
             DontDestroyOnLoad(this);
         }
-        /*private void InitTexts()
+
+        private void InitTexts()
         {
             int languageIndex = GetId(SelectedLanguage);
             Text[] texts = FindObjectsOfType<Text>();
             for (int i = 0; i < texts.Length; i++)
                 texts[i].SetLanguage(languageIndex);
-        }*/
+        }
 
         public void InitText(Text text)
         {

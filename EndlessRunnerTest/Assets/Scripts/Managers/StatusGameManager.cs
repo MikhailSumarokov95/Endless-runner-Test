@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using ToxicFamilyGames.AdsBrowser;
 
 public class StatusGameManager : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class StatusGameManager : MonoBehaviour
     [SerializeField] private GameObject _buttonGoMenu;
     [SerializeField] private Button _buttonStartFromMenu;
     [SerializeField] private GameObject _audioGameOver;
+    
     public Action onStartedGame;
     public Action onPausedGame;
     public Action onRestartedGame;
@@ -51,5 +53,7 @@ public class StatusGameManager : MonoBehaviour
         var audioGameOver = Instantiate(_audioGameOver);
         Destroy(audioGameOver, audioGameOver.GetComponent<AudioSource>().clip.length);
         _panelGameOver.SetActive(true);
+        _buttonGoMenu.SetActive(false);
+        YandexSDK.instance.ShowInter();
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ToxicFamilyGames.AdsBrowser;
 
 public class Player : MonoBehaviour
 {
@@ -21,11 +22,13 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        _playerAnimator = GetComponent<Animator>();
         _target = GameObject.FindGameObjectWithTag("TargetMovePlayer").transform;
+        _playerAnimator = GetComponent<Animator>();
         _scoreManager = FindObjectOfType<ScoreManager>();
         _difficultyManager = FindObjectOfType<DifficultyManager>();
         _statusGameManager = FindObjectOfType<StatusGameManager>();
+        if (YandexSDK.instance.isMobile()) FollowActionInputMobile();
+        else FollowActionInputPC();
     }
 
     private void Update()
@@ -79,6 +82,22 @@ public class Player : MonoBehaviour
     {
         var soundObj = Instantiate(sound);
         Destroy(soundObj, soundObj.GetComponent<AudioSource>().clip.length);
+    }
+
+    private void FollowActionInputMobile()
+    {
+        var inputController = FindObjectOfType<InputControlerMobile>();
+        inputController.onJump += Jump;
+        inputController.onMoveLeft += MoveLeft;
+        inputController.onMoveRight += MoveRight;
+    }
+
+    private void FollowActionInputPC()
+    {
+        var inputController = FindObjectOfType<InputControlerPC>();
+        inputController.onJump += Jump;
+        inputController.onMoveLeft += MoveLeft;
+        inputController.onMoveRight += MoveRight;
     }
 
     private void OnTriggerEnter (Collider other)

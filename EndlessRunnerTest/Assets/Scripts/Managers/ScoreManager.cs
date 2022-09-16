@@ -6,23 +6,19 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text _textCoins;
-    private int _coinsScore;
     private int _boost = 1;
-   
-    private void Start()
-    {
-        _coinsScore = PlayerPrefs.GetInt("money", 0);
-        SetCoinsText(_coinsScore);
-    }
-        
+
     public void PickUpCoin()
     {
-        _coinsScore += _boost;
-        PlayerPrefs.SetInt("money", _coinsScore);
-        SetCoinsText(_coinsScore);
+        var coinsScore = PlayerPrefs.GetInt("money", 0) + 1 * _boost;
+        PlayerPrefs.SetInt("money", coinsScore);
     }
 
-    public void SpentCoinInShop(int amountSpentCoins) => _coinsScore -= amountSpentCoins; 
+    public void SpentCoinInShop(int amountSpentCoins)
+    {
+        var coinsScore = PlayerPrefs.GetInt("money", 0) - amountSpentCoins;
+        PlayerPrefs.SetInt("money", coinsScore);
+    }
 
     public void SetBoost(bool status)
     {
@@ -30,5 +26,9 @@ public class ScoreManager : MonoBehaviour
         else _boost = 1;
     }
 
-    private void SetCoinsText(int coinsScore) => _textCoins.text = "Coins: " + coinsScore.ToString();
+    public void RewardCoins(int coinsRewarded)
+    {
+        var coinsScore = PlayerPrefs.GetInt("money", 0) + coinsRewarded;
+        PlayerPrefs.SetInt("money", coinsScore);
+    }
 }

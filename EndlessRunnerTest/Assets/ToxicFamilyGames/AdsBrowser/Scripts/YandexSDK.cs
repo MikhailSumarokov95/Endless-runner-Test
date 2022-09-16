@@ -84,7 +84,7 @@ namespace ToxicFamilyGames.AdsBrowser
                 }
             }
 
-            public void ShowInter()
+            public void ShowInter() //Межстрочная 
             {
 #if !UNITY_EDITOR
             ShowInterAd();
@@ -92,7 +92,7 @@ namespace ToxicFamilyGames.AdsBrowser
             }
 
             private int rewardId = 0;
-            public void ShowRewarded(int rewardId)
+            public void ShowRewarded(int rewardId) //Вознаграждение 
             {
                 this.rewardId = rewardId;
 #if !UNITY_EDITOR
@@ -134,6 +134,5 @@ namespace ToxicFamilyGames.AdsBrowser
             {
                 Application.OpenURL(vkLink);
             }
-
     }
 }
