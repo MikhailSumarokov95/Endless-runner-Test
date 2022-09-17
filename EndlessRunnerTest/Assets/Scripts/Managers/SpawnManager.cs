@@ -6,9 +6,6 @@ using System;
 
 public class SpawnManager : MonoBehaviour, IShoper
 {
-    public Action<GameObject> onCreateCharacter;
-    [SerializeField] private GameObject _roadPrefab;
-    [SerializeField] private GameObject _road;
     [SerializeField] private GameObject _coin;
     [SerializeField] private GameObject _coinBoost;
     [SerializeField] private GameObject[] _environment;
@@ -18,7 +15,6 @@ public class SpawnManager : MonoBehaviour, IShoper
     private DifficultyManager _difficultyManager;
     private StatusGameManager _statusGameManager;
     private Vector3 _spawnPointCharacter = new Vector3(7f, 0.3f, 0f);
-    private Vector3 _spawnPointRoad = new Vector3(149f, 0, 0);
     private Vector3 _spawnPointCoin = new Vector3(149f, 1f, 0);
     private Vector3 _spawnPointObstacle = new Vector3(149f, 0f, 0);
     private float[] _spawnPointZCoinAndObtacle = new float[] { 1.6f, 0, -1.6f };
@@ -27,15 +23,10 @@ public class SpawnManager : MonoBehaviour, IShoper
 
     private void Awake()
     {
+        _difficultyManager = FindObjectOfType<DifficultyManager>();
         _statusGameManager = FindObjectOfType<StatusGameManager>();
         _statusGameManager.onPausedGame += StopSpawn;
         _statusGameManager.onStartedGame += StartSpawn;
-        _difficultyManager = FindObjectOfType<DifficultyManager>();
-    }
-
-    private void Update()
-    {
-        if (_road.transform.position.x < 50) SpawnRoadAndGrass();
     }
 
     public void OnSelectCharacter(GameObject characterSkinSelected)
@@ -47,12 +38,6 @@ public class SpawnManager : MonoBehaviour, IShoper
     {
         if (_characterPlayer != null) Destroy(_characterPlayer);
         _characterPlayer = Instantiate(_characterSkinSelected, _spawnPointCharacter, _characterSkinSelected.transform.rotation);
-        onCreateCharacter?.Invoke(_characterPlayer);
-    }
-
-    private void SpawnRoadAndGrass()
-    {
-        _road = Instantiate(_roadPrefab, _spawnPointRoad, _roadPrefab.transform.rotation);
     }
 
     private void StopSpawn() => StopAllCoroutines();

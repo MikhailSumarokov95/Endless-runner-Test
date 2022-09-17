@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
     private ScoreManager _scoreManager;
     private DifficultyManager _difficultyManager;
     private StatusGameManager _statusGameManager;
+    private InputControlerMobile _inputControlerMobile;
+    private InputControlerPC _inputControlerPC;
 
     private void Start()
     {
@@ -40,6 +42,7 @@ public class Player : MonoBehaviour
 
     public void MoveLeft()
     {
+        print("MoveLeft");
         if (!(_target.transform.position.z > 0.1f))
         {
             _target.transform.Translate(-_translateRange);
@@ -49,6 +52,7 @@ public class Player : MonoBehaviour
 
     public void MoveRight()
     {
+        print("MoveRight");
         if (!(_target.transform.position.z < -0.1f))
         {
             _target.transform.Translate(_translateRange);
@@ -86,18 +90,36 @@ public class Player : MonoBehaviour
 
     private void FollowActionInputMobile()
     {
-        var inputController = FindObjectOfType<InputControlerMobile>();
-        inputController.onJump += Jump;
-        inputController.onMoveLeft += MoveLeft;
-        inputController.onMoveRight += MoveRight;
+        print("FollowActionInputMobile");
+        _inputControlerMobile = FindObjectOfType<InputControlerMobile>();
+        _inputControlerMobile.onJump += Jump;
+        _inputControlerMobile.onMoveLeft += MoveLeft;
+        _inputControlerMobile.onMoveRight += MoveRight;
     }
 
     private void FollowActionInputPC()
     {
-        var inputController = FindObjectOfType<InputControlerPC>();
-        inputController.onJump += Jump;
-        inputController.onMoveLeft += MoveLeft;
-        inputController.onMoveRight += MoveRight;
+        print("FollowActionInputPC");
+        _inputControlerPC = FindObjectOfType<InputControlerPC>();
+        _inputControlerPC.onJump += Jump;
+        _inputControlerPC.onMoveLeft += MoveLeft;
+        _inputControlerPC.onMoveRight += MoveRight;
+    }
+
+    private void OnDestroy()
+    {
+        if (_inputControlerPC != null)
+        {
+            _inputControlerPC.onJump -= Jump;
+            _inputControlerPC.onMoveLeft -= MoveLeft;
+            _inputControlerPC.onMoveRight -= MoveRight;
+        }
+        if (_inputControlerMobile != null)
+        {
+            _inputControlerMobile.onJump -= Jump;
+            _inputControlerMobile.onMoveLeft -= MoveLeft;
+            _inputControlerMobile.onMoveRight -= MoveRight;
+        }
     }
 
     private void OnTriggerEnter (Collider other)

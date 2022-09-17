@@ -16,6 +16,7 @@ public class Obstacle : ObjectSceneMoving
             Destroy(soundCrashObstacle, soundCrashObstacle.GetComponent<AudioSource>().clip.length);
             var fireCrashObstacle = Instantiate(_fireCrashObstacle, transform.position, Quaternion.identity);
             Destroy(fireCrashObstacle, 2);
+            Destroy(gameObject);
         }
     }
 }

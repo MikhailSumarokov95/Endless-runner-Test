@@ -13,6 +13,6 @@ public class InputControlerPC : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow)) onMoveLeft?.Invoke();
         else if (Input.GetKeyDown(KeyCode.RightArrow)) onMoveRight?.Invoke();
-        else if (Input.GetKeyDown(KeyCode.Space)) onJump?.Invoke();
+        else if (Input.GetKeyDown(KeyCode.UpArrow)) onJump?.Invoke();
     }
 }

@@ -62,7 +62,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _coin: {fileID: 7944656640177128579}
   _soundPickUp: {fileID: 1887711131034647452, guid: 73f9a127bb3d4c142b6ebb5ab084b34a, type: 3}
-  _firePickUpCoin: {fileID: 3270254085333126979, guid: e362896a9a66b9c4b87ec994aaee56dc, type: 3}
+  _firePickUpCoin: {fileID: 1000011154624606, guid: fc69ccf3f7f124548ae8d6c7ef37bace, type: 3}
 --- !u!54 &-3979876929888772319
 Rigidbody:
   m_ObjectHideFlags: 0

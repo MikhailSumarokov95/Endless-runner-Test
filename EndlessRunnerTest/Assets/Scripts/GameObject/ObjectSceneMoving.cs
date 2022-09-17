@@ -8,7 +8,6 @@ public abstract class ObjectSceneMoving: MonoBehaviour
     private StatusGameManager _statusGameManager;
     private float _difficulty;
     private float _speed = - 10;
-    private float _coefficient—orrectiveDirection;
     private bool _isMoveStoped;
 
 
@@ -19,21 +18,16 @@ public abstract class ObjectSceneMoving: MonoBehaviour
         _statusGameManager.onStartedGame += StartMove;
         _difficultyManager = FindObjectOfType<DifficultyManager>();
         _difficulty = _difficultyManager.SpeedGame;
-        if (transform.eulerAngles.y > 179) _coefficient—orrectiveDirection = -1;
-        else _coefficient—orrectiveDirection = 1;
     }
 
     public virtual void Update()
     {
         _difficulty = _difficultyManager.SpeedGame;
         if (!_isMoveStoped) Move();
-        if (transform.position.x < -50) Destroy(gameObject);
+        if (transform.position.x < 0) Destroy(gameObject);
     }
 
-    private void Move()
-    {
-        transform.Translate(Vector3.right * _coefficient—orrectiveDirection * _speed * _difficulty * Time.deltaTime);
-    }
+    private void Move() => transform.position += Vector3.right * _speed * _difficulty * Time.deltaTime;
 
     private void StopMove() => _isMoveStoped = true;
 
