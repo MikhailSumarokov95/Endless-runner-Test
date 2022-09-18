@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class DifficultyManager : MonoBehaviour
 {
     [SerializeField] private float _difficulty = 1;
     private int _boost = 1;
-    private ScoreManager _scoreManager;
     private StatusGameManager _statusGameManager;
     private bool _isStopedUpDifficulty;
 
@@ -18,7 +16,6 @@ public class DifficultyManager : MonoBehaviour
 
     private void Start()
     {
-        _scoreManager = FindObjectOfType<ScoreManager>();
         _statusGameManager = FindObjectOfType<StatusGameManager>();
         _statusGameManager.onPausedGame += StopUpDifficulty;
         _statusGameManager.onStartedGame += StartUpDifficulty;
@@ -29,11 +26,10 @@ public class DifficultyManager : MonoBehaviour
         if (!_isStopedUpDifficulty) UpDifficulty();
     }
 
-    public void SetBoost()
+    public void SetBoost(bool isActive)
     {
-        _boost = 2;
-        StartCoroutine(BoostTimer());
-        _scoreManager.SetBoost(true);
+        if (isActive) _boost = 2;
+        else _boost = 1;
     }
 
     private void UpDifficulty() => _difficulty += 0.01f * Time.deltaTime;
@@ -41,11 +37,4 @@ public class DifficultyManager : MonoBehaviour
     private void StopUpDifficulty() => _isStopedUpDifficulty = true;
 
     private void StartUpDifficulty() => _isStopedUpDifficulty = false;
-
-    private IEnumerator BoostTimer()
-    {
-        yield return new WaitForSeconds(10);
-        _boost = 1;
-        _scoreManager.SetBoost(false);
-    }
 }

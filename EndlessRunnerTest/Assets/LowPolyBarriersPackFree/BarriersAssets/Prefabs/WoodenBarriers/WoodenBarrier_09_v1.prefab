@@ -111,5 +111,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46db5b4f6687a944095bc8a8814532da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _soundCrashObstacle: {fileID: 0}
-  _fireCrashObstacle: {fileID: 0}
+  _soundCrashObstacle: {fileID: 2423856691076349745, guid: eccfd0b0741c2744cbd83e4c74ca402a, type: 3}
+  _fireCrashObstacle: {fileID: 3729567203740576960, guid: 4cf64cd6e12bc014989c50d8b54d9df6, type: 3}

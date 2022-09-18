@@ -7,7 +7,7 @@ using System;
 public class SpawnManager : MonoBehaviour, IShoper
 {
     [SerializeField] private GameObject _coin;
-    [SerializeField] private GameObject _coinBoost;
+    [SerializeField] private GameObject[] _powerUp;
     [SerializeField] private GameObject[] _environment;
     [SerializeField] private GameObject[] _obstacls;
     private GameObject _characterSkinSelected;
@@ -47,7 +47,7 @@ public class SpawnManager : MonoBehaviour, IShoper
         StartCoroutine(SpawnEnvironmentObject());
         StartCoroutine(SpawnCoins());
         StartCoroutine(SpawnObstacle());
-        StartCoroutine(SpawnBonus());
+        StartCoroutine(SpawnPowerUp());
     }
 
     IEnumerator SpawnEnvironmentObject()
@@ -82,13 +82,14 @@ public class SpawnManager : MonoBehaviour, IShoper
         }
     }
 
-    IEnumerator SpawnBonus()
+    IEnumerator SpawnPowerUp()
     {
         while (true)
         {
             yield return new WaitForSeconds(20 / _difficultyManager.SpeedGame);
+            int numberPowerUp = UnityEngine.Random.Range(0, _powerUp.Length);
             _spawnPointCoin.z = _spawnPointZCoinAndObtacle[UnityEngine.Random.Range(0, 3)];
-            Instantiate(_coinBoost, _spawnPointCoin, _coinBoost.transform.rotation);
+            Instantiate(_powerUp[numberPowerUp], _spawnPointCoin, _powerUp[numberPowerUp].transform.rotation);
         }
     }
 }

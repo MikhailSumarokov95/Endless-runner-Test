@@ -17,8 +17,8 @@ public class Player : MonoBehaviour
     private Vector3 _translateRange = new Vector3(0, 0, -1.6f);
     private Animator _playerAnimator;
     private ScoreManager _scoreManager;
-    private DifficultyManager _difficultyManager;
     private StatusGameManager _statusGameManager;
+    private BonusManager _bonusManager;
     private InputControlerMobile _inputControlerMobile;
     private InputControlerPC _inputControlerPC;
 
@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
         _target = GameObject.FindGameObjectWithTag("TargetMovePlayer").transform;
         _playerAnimator = GetComponent<Animator>();
         _scoreManager = FindObjectOfType<ScoreManager>();
-        _difficultyManager = FindObjectOfType<DifficultyManager>();
+        _bonusManager = FindObjectOfType<BonusManager>();
         _statusGameManager = FindObjectOfType<StatusGameManager>();
         if (YandexSDK.instance.isMobile()) FollowActionInputMobile();
         else FollowActionInputPC();
@@ -131,13 +131,22 @@ public class Player : MonoBehaviour
                 break;
 
             case "Obstacle":
+                if (_bonusManager.PlayerIsImmortality) break;
                 Destroy(gameObject);
                 _statusGameManager.GameOver();
                 break;
 
-            case "CoinBoost":
-                _difficultyManager.SetBoost();
+            case "PowerUpCoins":
+                _bonusManager.EnablePowerUpCoins();
                 break;
+
+            case "PowerUpSpeed":
+                _bonusManager.EnablePowerUpSpeed();
+                break;
+
+            case "PowerUpImmortality":
+                _bonusManager.EnablePowerUpImmortality();
+                break;  
         }
     }
 }

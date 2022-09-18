@@ -10,12 +10,14 @@ TagManager:
   - Obstacle
   - ScoreManager
   - Canvas
-  - AnimationManager
   - SoundManager
   - CoinBoost
   - EventManager
   - TargetMovePlayer
   - StatusGameManager
+  - PowerUpCoins
+  - PowerUpImmortality
+  - PowerUpSpeed
   layers:
   - Default
   - TransparentFX
