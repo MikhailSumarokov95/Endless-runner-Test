@@ -42,7 +42,6 @@ public class Player : MonoBehaviour
 
     public void MoveLeft()
     {
-        print("MoveLeft");
         if (!(_target.transform.position.z > 0.1f))
         {
             _target.transform.Translate(-_translateRange);
@@ -52,7 +51,6 @@ public class Player : MonoBehaviour
 
     public void MoveRight()
     {
-        print("MoveRight");
         if (!(_target.transform.position.z < -0.1f))
         {
             _target.transform.Translate(_translateRange);
@@ -90,7 +88,6 @@ public class Player : MonoBehaviour
 
     private void FollowActionInputMobile()
     {
-        print("FollowActionInputMobile");
         _inputControlerMobile = FindObjectOfType<InputControlerMobile>();
         _inputControlerMobile.onJump += Jump;
         _inputControlerMobile.onMoveLeft += MoveLeft;
@@ -99,7 +96,6 @@ public class Player : MonoBehaviour
 
     private void FollowActionInputPC()
     {
-        print("FollowActionInputPC");
         _inputControlerPC = FindObjectOfType<InputControlerPC>();
         _inputControlerPC.onJump += Jump;
         _inputControlerPC.onMoveLeft += MoveLeft;
