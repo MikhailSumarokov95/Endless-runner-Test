@@ -5,13 +5,16 @@ using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-    [SerializeField] private TMP_Text _textCoins;
+    [SerializeField] private TMP_Text _textCoinsRound;
     private int _boost = 1;
+    private int _coinsRound;
 
     public void PickUpCoin()
     {
-        var coinsScore = PlayerPrefs.GetInt("money", 0) + 1 * _boost;
+        var coinsScore = PlayerPrefs.GetInt("money", 0) + _boost;
         PlayerPrefs.SetInt("money", coinsScore);
+        _coinsRound += _boost;
+        _textCoinsRound.text = _coinsRound.ToString();
     }
 
     public void SpentCoinInShop(int amountSpentCoins)
